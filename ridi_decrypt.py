@@ -117,7 +117,7 @@ def run(summaryDict):
                     os.remove(file.path)
                     continue
                 if file.is_file():
-                    newDir = createDir(f'DRM-REMOVED\\{title}')
+                    newDir = createDir(f'DRM-REMOVED\\{filename}')
                     decfile = newDir + "\\" + file.name
                     printLog(2, f'Decrypting [{file.name}]')
                     if (decryptBook(key, file.path, decfile) == -1):
